@@ -16,28 +16,21 @@ public class MazeSolve
     
     public static void main(String[] args) throws IOException
     {
-//        int[] initialSpecs   = inputInitialSpecs();
-//        int mazeLength       = initialSpecs[0];
-//        int[] startEndCoords = {initialSpecs[1], initialSpecs[2], initialSpecs[3], 
-//            initialSpecs[4]};
-//        
-//        MatrixGraph maze = constructMazeWithVertexEndpoints(mazeLength);
-//        
-//        System.out.println("Minimum spanning tree edges");
-//        maze.printEdgeList();
-//        MapDisplay mapDisplay = new MapDisplay(maze, startEndCoords);
+        int[] initialSpecs   = inputInitialSpecs();
+        int mazeLength       = initialSpecs[0];
+        int[] startEndCoords = {initialSpecs[1], initialSpecs[2], initialSpecs[3], 
+            initialSpecs[4]};
+        
+        MatrixGraph maze = constructMazeWithVertexEndpoints(mazeLength);
+        
+        System.out.println("Minimum spanning tree edges");
+        maze.printEdgeList();
+        MapDisplay mapDisplay = new MapDisplay(maze, startEndCoords);
         
         //The below code will solve the maze through the DFS algorithm, but I 
         //will also provide a separate zip file of classes for the MazeSolve portion
         //of the assignment as well. 
-//        solveMaze(maze, startEndCoords, mapDisplay);
-        System.out.println("===========");
-        String a = "li";
-        String b = "ght";
-        String mood = "light";
-        String emotion = a.concat(b);
-        System.out.println((mood == emotion));
-        System.out.println((mood.equals(emotion)));
+        solveMaze(maze, startEndCoords, mapDisplay);
     }
     
     /**
