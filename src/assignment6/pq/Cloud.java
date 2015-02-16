@@ -98,8 +98,12 @@ public class Cloud
         return minSpanTree;
     }
     
-    /**Re-updates the keys of all entries of vertices incident to parameter entry's 
-     vertex*/
+    /**Re-updates the keys of all entries of vertices incident to parameter entry's vertex.
+       The chosen entry has all of its incident edges evaluated, none of which leading to 
+       any vertices already in cloud. For each incident vertex, if the incident edge
+       is better than their existing edge from the CLOUD itself, swap it in. Afterwards,
+       backedge it (removeFromIncidentEdges()).
+     */
     private void recalculateCloudDistances(Entry entry)
     {
         Vertex vertex = entry.getVertex();
